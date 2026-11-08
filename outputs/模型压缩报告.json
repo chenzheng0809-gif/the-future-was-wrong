@@ -1,0 +1,74 @@
+[
+  {
+    "kind": "dr-wrong",
+    "originalBytes": 50249872,
+    "optimizedBytes": 15358544,
+    "reductionPercent": 69.4,
+    "originalSha256": "125eb473c12404766e2200665f638bdeca4bd268b6336e25c3c9fc75040a05de",
+    "optimizedSha256": "23438d72066d9f6ce66bb3ac0061bdd0f6c0695c18302d726d869ee25dba691d"
+  },
+  {
+    "kind": "cat",
+    "originalBytes": 49466504,
+    "optimizedBytes": 14283320,
+    "reductionPercent": 71.1,
+    "originalSha256": "150aebd8f28a1c96ebe3f8c7bd12fd6157c4fd277e50e8074d944dd509369517",
+    "optimizedSha256": "62decdfb5adfa4064ec1b2008a3deb7bd2e5b418665cfdc8d1fd9c3bd2832912"
+  },
+  {
+    "kind": "ocean",
+    "originalBytes": 49743228,
+    "optimizedBytes": 14605064,
+    "reductionPercent": 70.6,
+    "originalSha256": "1475783e2c31b03e160c47f37e4f0dc29cbe2e05fcd706a9731018afeca4b274",
+    "optimizedSha256": "3498421c34d80b61346134de05317eb4482b29b22a4bdcfd406632bc88e0bbc2"
+  },
+  {
+    "kind": "fungi",
+    "originalBytes": 51156820,
+    "optimizedBytes": 15150968,
+    "reductionPercent": 70.4,
+    "originalSha256": "1ad42e23cab2e92b0a3c6f32380aba39438eb7543929a161ffda63271aab8bb9",
+    "optimizedSha256": "23949afcaf9155f9c9790a23bda48d5de1fce40dcfe013f5d2fd7ee5261aec5f"
+  },
+  {
+    "kind": "machine",
+    "originalBytes": 49933420,
+    "optimizedBytes": 14715196,
+    "reductionPercent": 70.5,
+    "originalSha256": "21b088db38bc694aac38233eef8b0b0ab26e892f7a1ddd1a5cc3ddde611f369f",
+    "optimizedSha256": "5555ecd6127fc8d958059505c6e6ed5c15065e3574f87260f3c0ad402d4822f2"
+  },
+  {
+    "kind": "worker",
+    "originalBytes": 48650232,
+    "optimizedBytes": 12732436,
+    "reductionPercent": 73.8,
+    "originalSha256": "634ac36437d0ad28bd331153a67f185077ec3a7d6d69d07163929ccdeb033844",
+    "optimizedSha256": "2147417229258e9fa4aff38dbfa14cf54add9f73badde60301cbb3aa3845d10b"
+  },
+  {
+    "kind": "milk-tea",
+    "originalBytes": 59881644,
+    "optimizedBytes": 16428704,
+    "reductionPercent": 72.6,
+    "originalSha256": "896a750f0a5b2aaaa4466b4476b6758ce801b9511b5db71cc85961623a72f7f9",
+    "optimizedSha256": "31cd0703f663c5a0c70179571b5f2eb7d9cfc964ba29bfe8c192b591fc3920b5"
+  },
+  {
+    "kind": "airpods-max",
+    "originalBytes": 49431148,
+    "optimizedBytes": 13230840,
+    "reductionPercent": 73.2,
+    "originalSha256": "c2d507360f99ae19efc44b99ca8f963702c0510e9c7d1eeb97712af7fd06f657",
+    "optimizedSha256": "a39e21c48e629462e1046adb98a4761c52bec78ec013a7e3ef36c333f14cdc0c"
+  },
+  {
+    "kind": "photo-projector",
+    "originalBytes": 49115144,
+    "optimizedBytes": 14461856,
+    "reductionPercent": 70.6,
+    "originalSha256": "54cdb3efc9afaa5bd7a1f63f18da8dfe21a23373c6b05d4bf3b79bbb2989d717",
+    "optimizedSha256": "5f84e14c994c68b4236524ddd9527da491fe70c5fff5cae578bf8cee314dc990"
+  }
+]

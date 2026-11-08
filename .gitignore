@@ -1,0 +1,12 @@
+node_modules/
+dist/
+work/
+.DS_Store
+.env
+.env.*
+*.log
+outputs/*
+!outputs/模型压缩报告.json
+!outputs/模型资源核对.json
+!outputs/美术素材说明.md
+!outputs/最终优化记录.md

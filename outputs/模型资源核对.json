@@ -1,0 +1,176 @@
+[
+  {
+    "source": "mr wrong.glb",
+    "file": "dr-wrong.glb",
+    "role": "Dr. Wrong",
+    "bytes": 50249872,
+    "sha256": "125eb473c12404766e2200665f638bdeca4bd268b6336e25c3c9fc75040a05de",
+    "meshes": 1,
+    "vertices": 1022243,
+    "animations": 0,
+    "bounds": [
+      {
+        "min": [
+          -0.35811731219291687,
+          -0.5000125169754028,
+          -0.23737609386444092
+        ],
+        "max": [
+          0.35788673162460327,
+          0.4995187819004059,
+          0.23790429532527924
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Hi3D_写实3D国王猫 皇冠披风_allparts_20261108_134743.glb",
+    "file": "cat.glb",
+    "role": "CAT",
+    "bytes": 49466504,
+    "sha256": "150aebd8f28a1c96ebe3f8c7bd12fd6157c4fd277e50e8074d944dd509369517",
+    "meshes": 1,
+    "vertices": 1019560,
+    "animations": 0,
+    "bounds": [
+      {
+        "min": [
+          -0.3895374834537506,
+          -0.49916669726371765,
+          -0.3576584756374359
+        ],
+        "max": [
+          0.3906511962413788,
+          0.4997049570083618,
+          0.3589783012866974
+        ]
+      }
+    ]
+  },
+  {
+    "source": "菌菇.glb",
+    "file": "fungi.glb",
+    "role": "FUNGI",
+    "bytes": 51156820,
+    "sha256": "1ad42e23cab2e92b0a3c6f32380aba39438eb7543929a161ffda63271aab8bb9",
+    "meshes": 1,
+    "vertices": 1064700,
+    "animations": 0,
+    "bounds": [
+      {
+        "min": [
+          -0.26641136407852173,
+          -0.5000765919685364,
+          -0.24802769720554352
+        ],
+        "max": [
+          0.2666594684123993,
+          0.4993981420993805,
+          0.24808013439178467
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Hi3D_写实3D珍珠奶茶杯_allparts_20261108_150402.glb",
+    "file": "milk-tea.glb",
+    "role": "ARTIFACT_1",
+    "bytes": 59881644,
+    "sha256": "896a750f0a5b2aaaa4466b4476b6758ce801b9511b5db71cc85961623a72f7f9",
+    "meshes": 1,
+    "vertices": 1018775,
+    "animations": 0,
+    "bounds": [
+      {
+        "min": [
+          -0.26204153895378113,
+          -0.500066339969635,
+          -0.2638026773929596
+        ],
+        "max": [
+          0.2620268166065216,
+          0.5000026226043701,
+          0.26368311047554016
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Hi3D_写实3D头戴式耳机_allparts_20261108_155116.glb",
+    "file": "airpods-max.glb",
+    "role": "ARTIFACT_2",
+    "bytes": 49431148,
+    "sha256": "c2d507360f99ae19efc44b99ca8f963702c0510e9c7d1eeb97712af7fd06f657",
+    "meshes": 1,
+    "vertices": 1038362,
+    "animations": 0,
+    "bounds": [
+      {
+        "min": [
+          -0.4964863955974579,
+          -0.49925941228866577,
+          -0.21300649642944336
+        ],
+        "max": [
+          0.4963655173778534,
+          0.49907007813453674,
+          0.21293343603610992
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Hi3D_蒸汽朋克照片投影仪3D模型_allparts_20261108_171937.glb",
+    "file": "photo-projector.glb",
+    "role": "ARTIFACT_3",
+    "bytes": 49115144,
+    "sha256": "54cdb3efc9afaa5bd7a1f63f18da8dfe21a23373c6b05d4bf3b79bbb2989d717",
+    "meshes": 1,
+    "vertices": 1009260,
+    "animations": 0,
+    "bounds": [
+      {
+        "min": [
+          -0.49930083751678467,
+          -0.43294426798820496,
+          -0.5000768899917603
+        ],
+        "max": [
+          0.4992813766002655,
+          0.4332277774810791,
+          0.5000629425048828
+        ]
+      }
+    ]
+  },
+  {
+    "source": "打工机器人.glb",
+    "file": "worker.glb",
+    "role": "WORKER",
+    "bytes": 48650232,
+    "sha256": "634ac36437d0ad28bd331153a67f185077ec3a7d6d69d07163929ccdeb033844",
+    "meshes": 1,
+    "vertices": 1017395,
+    "animations": 0
+  },
+  {
+    "source": "Hi3D_复古科幻人形机器人3D模型_allparts_20261108_135658.glb",
+    "file": "machine.glb",
+    "role": "MACHINE",
+    "bytes": 49933420,
+    "sha256": "21b088db38bc694aac38233eef8b0b0ab26e892f7a1ddd1a5cc3ddde611f369f",
+    "meshes": 1,
+    "vertices": 1025131,
+    "animations": 0
+  },
+  {
+    "source": "海洋.glb",
+    "file": "ocean.glb",
+    "role": "OCEAN",
+    "bytes": 49743228,
+    "sha256": "1475783e2c31b03e160c47f37e4f0dc29cbe2e05fcd706a9731018afeca4b274",
+    "meshes": 1,
+    "vertices": 1035292,
+    "animations": 0
+  }
+]

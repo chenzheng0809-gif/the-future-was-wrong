@@ -1,0 +1,6 @@
+import {useEffect,useRef} from 'react';
+export default function ExitConfirmation({action,onCancel,onConfirm}:{action:'home'|'restart';onCancel:()=>void;onConfirm:()=>void}){
+ const cancel=useRef<HTMLButtonElement>(null);
+ useEffect(()=>{const previous=document.activeElement as HTMLElement|null;cancel.current?.focus();return()=>previous?.focus()},[]);
+ return <div className="exit-backdrop" onClick={e=>{if(e.target===e.currentTarget)onCancel()}}><section role="dialog" aria-modal="true" aria-labelledby="exit-title" aria-describedby="exit-description" className="archive-paper exit-dialog" onKeyDown={e=>{if(e.key==='Escape'){e.preventDefault();onCancel()}if(e.key==='Tab'){const buttons=e.currentTarget.querySelectorAll<HTMLButtonElement>('button'),first=buttons[0],last=buttons[buttons.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}}}><label>PERSONAL MEMORY / UNSAVED ON DEVICE</label><h2 id="exit-title">带走记忆，再离开。</h2><p id="exit-description">{action==='home'?'返回首页':'重新开始'}将清除本次选择和私人记忆。如果还想留住它，请先复制档案。</p><div><button ref={cancel} className="brass-button dark-brass" onClick={onCancel}>继续探索</button><button className="text" onClick={onConfirm}>{action==='home'?'确认返回':'确认重新开始'}</button></div></section></div>
+}

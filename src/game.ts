@@ -1,0 +1,8 @@
+export const ids=['CAT','OCEAN','FUNGI','MACHINE','WORKER'] as const;
+export type Civ=typeof ids[number];
+export const names=['猫咪神权文明','海洋潮汐文明','菌菇集体意识文明','机械理性文明','永恒打工人文明'];
+const roots=['猫神','潮汐','菌丝','机械','加班'];
+export function generate(p:Civ[]){const count=(x:Civ)=>p.filter(y=>y===x).length;const dominant=p.reduce((a,b)=>count(b)>count(a)?b:a,p[0]);return {dominant,name:roots[ids.indexOf(p[0])]+'·'+roots[ids.indexOf(p[1])]+'·'+roots[ids.indexOf(p[2])]+'共同体',traits:p.map((x,i)=>['信仰','连接','传承'][i]+'：'+names[ids.indexOf(x)]),motto:`所有${roots[ids.indexOf(p[1])]}，最终都应为${roots[ids.indexOf(p[0])]}服务。`,history:`他们以${roots[ids.indexOf(p[0])]}建立秩序，用${roots[ids.indexOf(p[1])]}连接彼此。直到一台影像装置被发现，${roots[ids.indexOf(p[2])]}成为永恒的传统。考古局认为，这个解释相当严谨。`};}
+export const artifacts=[{name:'未知液体容器',sub:'珍珠奶茶杯',line:'检测到一种装满黑色球体的古代液体。显然，这绝不只是饮料。',options:['这是古代人类献给猫神的神圣贡品。','这是便携式潮汐池，用于储存海洋能量。','这是培养共生菌群的微型生态容器。','这是维持有机计算系统运转的冷却液。','这是延长工作时间的合法续命药剂。']},{name:'双耳金属装置',sub:'AirPods Max',line:'这种装置能够覆盖人类的听觉器官。看来他们极其重视外界指令。',options:['接收猫神指令的双耳圣器。','模拟深海回声定位的声波器官。','连接集体意识的私人菌丝接口。','为人类大脑更新固件的终端设备。','确保下班后仍能接收工作通知的装置。']},{name:'未知光学装置',sub:'照片投影仪',line:'检测到一种能够将静止影像放大的古代装置。它只能重复同一个瞬间。人类为什么需要一遍遍观看过去？',options:['向猫科统治者展示荣耀事迹的皇家仪式装置。','投射潮汐变化与远航路线的光学导航仪。','集体意识诞生前，用光交换记忆的原始接口。','将离线影像放大并读取的光学终端。','把工作汇报投到墙上，确保所有人都无法回避的设备。']}];
+export const endings=[['写进历史','被命名的下午','古人类日常陪伴记录。未来的人终于能找到它了。只是……我还是不知道他们那天在笑什么。'],['为它留白','留白的档案','物品：私人合影　意义：__________　保存状态：永久保存。原来……档案也可以有空白。'],['寻找他们的故事','故事尚未结束','他们叫什么名字？他们为什么会相遇？那天以后，他们怎么样了？也许，我们该去了解照片里的两个人。']];
+export type Stage='INTRO'|'DR_WRONG_AWAKENING'|'ARTIFACT_1'|'ARTIFACT_2'|'ARTIFACT_3'|'CIVILIZATION_REVEAL'|'FINAL_ARTIFACT'|'ARCHIVE_DECISION'|'PRIVATE_MEMORY'|'ENDING';
