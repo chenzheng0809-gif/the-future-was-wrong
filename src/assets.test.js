@@ -55,3 +55,7 @@ it('decodes every compressed buffer with the exact Meshopt decoder bundled in th
   for(const view of json.bufferViews){const ext=view.extensions?.EXT_meshopt_compression;if(!ext)continue;const output=new Uint8Array(ext.count*ext.byteStride);const bytes=data.subarray(binStart+(ext.byteOffset||0),binStart+(ext.byteOffset||0)+ext.byteLength);expect(()=>decoder.decodeGltfBuffer(output,ext.count,ext.byteStride,bytes,ext.mode,ext.filter)).not.toThrow();}
  }
 });
+it('resolves assets under a repository subpath without breaking local hosting',async()=>{
+ const {vi}=await import('vitest');const {assetUrl}=await import('./assets');
+ try{vi.stubEnv('BASE_URL','/the-future-was-wrong/');expect(assetUrl('/models/cat.glb?v=3')).toBe('/the-future-was-wrong/models/cat.glb?v=3');expect(assetUrl('images/memory-photo.png')).toBe('/the-future-was-wrong/images/memory-photo.png')}finally{vi.unstubAllEnvs()}
+});

@@ -6,7 +6,9 @@
     "dev": "vite --host 0.0.0.0",
     "build": "tsc --noEmit && vite build",
     "test": "node --import tsx src/test.ts && vitest run",
-    "models:optimize": "node scripts/optimize-models.mjs"
+    "models:optimize": "node scripts/optimize-models.mjs",
+    "build:pages": "npm run build -- --base=/the-future-was-wrong/",
+    "deploy:pages": "npm run build:pages && node scripts/publish-pages.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.0.0",

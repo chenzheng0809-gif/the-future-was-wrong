@@ -1,0 +1,23 @@
+// Run only after build:pages. Publish dist without changing the source checkout/index.
+import {execFileSync} from 'node:child_process';
+import {readFileSync,mkdirSync,existsSync} from 'node:fs';
+import {resolve} from 'node:path';
+const root=process.cwd(),gitDir=resolve(root,'.git'),dist=resolve(root,'dist');
+if(!existsSync(resolve(dist,'index.html')))throw Error('Run npm run build:pages first');
+if(!readFileSync(resolve(dist,'index.html'),'utf8').includes('/the-future-was-wrong/assets/'))throw Error('Build is not configured for this Pages subpath');
+mkdirSync(resolve(root,'work'),{recursive:true});
+const env={...process.env,GIT_INDEX_FILE:resolve(root,'work/pages-publish.index')};
+const git=(args,options={})=>execFileSync('git',['--git-dir',gitDir,...args],{env,encoding:'utf8',...options}).trim();
+const remote=git(['remote','get-url','origin']);
+if(!remote.includes('github.com/chenzheng0809-gif/the-future-was-wrong'))throw Error('Unexpected publishing repository');
+const auth=['-c','credential.helper=','-c','credential.helper=!gh auth git-credential'];
+const previous=git([...auth,'ls-remote','origin','refs/heads/gh-pages']).split(/\s/)[0];
+if(previous)git([...auth,'fetch','origin','gh-pages']);
+git(['read-tree','--empty']);
+git(['--work-tree',dist,'add','--all','.'],{cwd:dist});
+const tree=git(['write-tree']);
+const source=git(['rev-parse','--short','HEAD']);
+const commit=git(['commit-tree',tree,...(previous?['-p',previous]:[])],{input:`Publish game website from ${source}\n`});
+git(['update-ref','refs/heads/gh-pages',commit]);
+console.log(git([...auth,'push','origin','gh-pages']));
+console.log(`Published gh-pages commit ${commit}`);
