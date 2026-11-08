@@ -3,9 +3,8 @@ import {Canvas,useFrame} from '@react-three/fiber';
 import {OrbitControls,useGLTF,Center,useProgress} from '@react-three/drei';
 import type {OrbitControls as OrbitControlsImpl} from 'three-stdlib';
 import {Box3,Vector3,Group} from 'three';
-import {getModelAsset,civilizationModels} from './assets';
-import {ArtifactIllustration,CivilizationEmblem,artifactRecords} from './ArchiveVisuals';
-import type {Civ} from './game';
+import {getModelAsset} from './assets';
+import Fallback from './ModelFallback';
 import {retainModel} from './modelResources';
 
 class Boundary extends Component<{children:ReactNode;onError:()=>void;fallback:ReactNode},{error:boolean}>{
@@ -20,11 +19,6 @@ function Model({url,awakening,onReady}:{url:string;awakening:boolean;onReady:()=
  const reduced=useMemo(()=>window.matchMedia('(prefers-reduced-motion: reduce)').matches,[]);
  useFrame(({clock})=>{if(group.current&&awakening&&!reduced){group.current.position.y=Math.sin(clock.elapsedTime*1.4)*.025;group.current.rotation.z=Math.sin(clock.elapsedTime*.8)*.018}});
  return <group ref={group} rotation={[0,-.12,0]}><primitive object={model}/></group>
-}
-function RobotFallback(){return <div className="robot-fallback" role="img" aria-label="Dr. Wrong 角色轮廓占位"><div className="robot-head"><div>· ·<br/>―</div><i/></div><div className="robot-body">◆</div><small>DR. WRONG / 角色示意</small></div>}
-function Fallback({kind}:{kind:string}){
- const civ=Object.entries(civilizationModels).find(([,value])=>value===kind)?.[0] as Civ|undefined;
- return kind==='dr-wrong'?<RobotFallback/>:<div className="model-static-fallback" role="img" aria-label={`${getModelAsset(kind).label}临时复原图`}>{civ?<CivilizationEmblem id={civ}/>:artifactRecords.some(x=>x.kind===kind)?<ArtifactIllustration kind={kind}/>:null}<small>当前展示的是临时复原形态。</small></div>
 }
 export default function ModelViewer({kind,awakening=false}:{kind:string;awakening?:boolean}){
  const [retry,setRetry]=useState(0),[failed,setFailed]=useState(false),[ready,setReady]=useState(false);
